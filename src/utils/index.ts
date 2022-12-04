@@ -29,3 +29,10 @@
  *     import { myUtil } from '../utils'
  *
  */
+
+export function intersection<T extends V, V = unknown>(
+  setA: Set<T>,
+  setB: Set<V>,
+) {
+  return new Set([...setA].filter((element) => setB.has(element)));
+}
