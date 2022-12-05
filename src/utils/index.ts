@@ -36,3 +36,7 @@ export function intersection<T extends V, V = unknown>(
 ) {
   return new Set([...setA].filter((element) => setB.has(element)));
 }
+
+export function transpose(array: Array<Array<unknown>>){
+  return array[0].map((_, colIndex) => array.map(row => row[colIndex]));
+}
